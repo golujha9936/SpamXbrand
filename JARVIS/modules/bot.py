@@ -24,10 +24,10 @@ handlers = [X1, X2, X3, X4, X5, X6, X7, X8, X9, X10]
 async def ping(event):
     if event.sender_id in SUDO_USERS:
         start = datetime.now()
-        jarvis = await event.reply("ᴥ︎︎︎ 𝐉𝐀𝐑𝐕𝐈𝐒 ✔︎")
+        jarvis = await event.reply("𝐅𝐔𝐂𝐊 𝐁𝐑𝐀𝐍𝐃")
         end = datetime.now()
         mp = (end - start).microseconds / 1000
-        await jarvis.edit(f"[𝐉𝐀𝐑𝐕𝐈𝐒 𝐈𝐒 𝐑𝐄𝐀𝐃𝐘 𝐓𝐎  ](https://t.me/JARVIS_V_SUPPORT)[𝐅𝐔𝐂𝐊 𝐇𝐀𝐓𝐄𝐑𝐒 🥀](https://t.me/Dora_Hub)🤖\n» `{mp} ᴍꜱ`")
+        await jarvis.edit(f"[𝐅𝐔𝐂𝐊 𝐁𝐑𝐀𝐍𝐃 𝐈𝐒 𝐑𝐄𝐀𝐃𝐘 𝐓𝐎  ](https://t.me/Ace_networkop)[𝐅𝐔𝐂𝐊 𝐇𝐀𝐓𝐄𝐑𝐒 🥀](https://t.me/About_Aryan_Owner/3)🤖\n» `{mp} ᴍꜱ`")
 
 # Function to handle reboot command
 async def restart(event):
@@ -45,7 +45,7 @@ async def addsudo(event):
     if event.sender_id == OWNER_ID:
         Heroku = heroku3.from_key(HEROKU_API_KEY)
         sudousers = getenv("SUDO_USERS", default="")
-        ok = await event.reply("» __Jarvis Ka Ek Beta Aur Add Ho rha hai.__")
+        ok = await event.reply("» __EvoXD Ka Ek Beta Aur Add Ho rha hai.__")
         target = ""
         
         if HEROKU_APP_NAME is None:
@@ -63,14 +63,14 @@ async def addsudo(event):
             return
 
         if str(target) in sudousers:
-            await ok.edit("ʏᴇ ᴛᴏʜ ᴊᴀʀᴠɪs ᴋᴀ ʜɪ ʙᴀᴄʜᴀ ʜᴀɪ ")
+            await ok.edit("ʏᴇ ᴛᴏʜ ─‌⃛┼𝆺𝅥⃝ᶦϻ‌ ᵛ‌ᵎᵖ ≛⃝ 𝐀𝐫𝐲𝐚𝐧❣️𓆩𝐎𝐰𝐧𝐞𝐫𓆪ꪾ🥀⃝⃪•๋๋•๋๋≛ ᴋᴀ ʜɪ ʙᴀᴄʜᴀ ʜᴀɪ ")
         else:
             newsudo = f"{sudousers} {target}".strip()
             await ok.edit(f"» **ɴᴇᴡ ꜱᴜᴅᴏ ᴜꜱᴇʀ**: `{target}`\n» `ADD KAR DIYE HAI SUDO..BOT RESTART HO RHA HAI`")
             heroku_var["SUDO_USERS"] = newsudo
     
     elif event.sender_id in SUDO_USERS:
-        await event.reply("» ᴏɴʟʏ ᴊᴀʀᴠɪs ᴄᴀɴ ᴀᴅᴅ sᴜᴅᴏ ᴜsᴇʀs..")
+        await event.reply("» ᴏɴʟʏ ─‌⃛┼𝆺𝅥⃝ᶦϻ‌ ᵛ‌ᵎᵖ ≛⃝ 𝐀𝐫𝐲𝐚𝐧❣️𓆩𝐎𝐰𝐧𝐞𝐫𓆪ꪾ🥀⃝⃪•๋๋•๋๋≛ ᴄᴀɴ ᴀᴅᴅ sᴜᴅᴏ ᴜsᴇʀs..")
 
 # Function to remove sudo user
 async def removesudo(event):
@@ -101,17 +101,17 @@ async def removesudo(event):
             await ok.edit(f"Removed sudo user: `{target}`")
             heroku_var["SUDO_USERS"] = new_sudo_users
     else:
-        await event.reply("ᴏɴʟʏ ᴊᴀʀᴠɪs ᴄᴀɴ ʀᴇᴍᴏᴠᴇ sᴜᴅᴏ ᴜsᴇʀs..")
+        await event.reply("ᴏɴʟʏ ─‌⃛┼𝆺𝅥⃝ᶦϻ‌ ᵛ‌ᵎᵖ ≛⃝ 𝐀𝐫𝐲𝐚𝐧❣️𓆩𝐎𝐰𝐧𝐞𝐫𓆪ꪾ🥀⃝⃪•๋๋•๋๋≛ ᴄᴀɴ ʀᴇᴍᴏᴠᴇ sᴜᴅᴏ ᴜsᴇʀs..")
 
 # Function to show sudo users
 async def show_sudo_users(event):
     if event.sender_id == OWNER_ID:
-        sudo_users_list = "ᴋɪᴅᴢᴢ ᴏғ ᴛʜᴇ **ᴊᴀʀᴠɪs**:\n"
+        sudo_users_list = "ᴋɪᴅᴢᴢ ᴏғ ᴛʜᴇ **Evo^xᴅ 𓆩🇮🇳𓆪**:\n"
         for user_id in SUDO_USERS:
             sudo_users_list += f"- {user_id}\n"
         await event.reply(sudo_users_list)
     else:
-        await event.reply("ᴛʜɪs ғᴜɴᴄᴛɪᴏɴ ᴄᴀɴ ᴏɴʟʏ ᴘᴇʀғᴏʀᴍ ʙʏ ᴊᴀʀᴠɪs.")
+        await event.reply("ᴛʜɪs ғᴜɴᴄᴛɪᴏɴ ᴄᴀɴ ᴏɴʟʏ ᴘᴇʀғᴏʀᴍ ʙʏ Evo^xᴅ 𓆩🇮🇳𓆪.")
 
 # Function to add multiple sudo users
 async def addmultisudo(event):
@@ -148,7 +148,7 @@ async def addmultisudo(event):
         
         await ok.edit(f"Added {len(target_ids)} new sudo users.")
     elif event.sender_id in SUDO_USERS:
-        await event.reply("ᴏɴʟʏ ᴊᴀʀᴠɪs ᴄᴀɴ ᴀᴅᴅ ᴍᴜʟᴛɪsᴜᴅᴏ ᴜsᴇʀs ᴀᴛ ᴀ ᴛɪᴍᴇ.")
+        await event.reply("ᴏɴʟʏ ─‌⃛┼𝆺𝅥⃝ᶦϻ‌ ᵛ‌ᵎᵖ ≛⃝ 𝐀𝐫𝐲𝐚𝐧❣️𓆩𝐎𝐰𝐧𝐞𝐫𓆪ꪾ🥀⃝⃪•๋๋•๋๋≛ ᴄᴀɴ ᴀᴅᴅ ᴍᴜʟᴛɪsᴜᴅᴏ ᴜsᴇʀs ᴀᴛ ᴀ ᴛɪᴍᴇ.")
 
 # Register event handlers
 for handler in handlers:
